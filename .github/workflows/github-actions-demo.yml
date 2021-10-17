@@ -6,11 +6,11 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v2
-      - run: pip3 install pytest
+      - run: python -m pip3 install pytest
       - name: List files in the repository
         run: |
           ls -R ${{ github.workspace }}
-      - run: pytest
+      - run: python -m pytest
       # - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       # - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       # - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
