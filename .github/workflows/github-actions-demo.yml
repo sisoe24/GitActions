@@ -2,9 +2,6 @@ name: GitHub Actions Demo
 on: [push]
 jobs:
   Explore-GitHub-Actions:
-    strategy:
-      matrix:
-        os: [ubuntu-20.04, macos-10.15, windows-2019]
     runs-on: macos-10.15
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
