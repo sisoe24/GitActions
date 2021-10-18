@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: python3 -m pip install poetry
       - run: python3 -m poetry install
-      - run: python3 -m pytest -v
+      - run: poetry run pytest -v
       - name: Coveralls GitHub Action
         uses: coverallsapp/github-action@1.1.3
 
